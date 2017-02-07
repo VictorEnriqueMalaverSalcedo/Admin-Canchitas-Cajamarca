@@ -11,12 +11,12 @@ var isInit = true,
 
 function validateData(data) {
     if (!data.email) {
-        alert('Missing email');
+        alert('Ingrese correo');
         return false;
     }
 
     if (!data.password) {
-        alert('Missing password');
+        alert('Ingrese contraseña');
         return false;
     }
 
@@ -48,6 +48,11 @@ function registerSuccess() {
     helpers.navigate('components/canchas/canchas');
 }
 
+function passwordSuccess() {
+    // helpers.navigate('components/login/login');
+    viewModel.onShowSignin();
+}
+
 function onRegister(data) {
     if (validateData(data)) {
         data.email = data.email.toLowerCase();
@@ -55,17 +60,44 @@ function onRegister(data) {
     }
 }
 
+function onPassword(data) {
+    if (!data.email) {
+        alert('Ingrese correo');
+        return false;
+    }else{
+        data.email = data.email.toLowerCase();
+        service.password(data, passwordSuccess, authError);
+    }
+}
+
 function onShowRegister() {
     viewModel.onShowRegister();
 }
-
+function onShowPassword() {
+    viewModel.onShowSendPassword();
+}
 function onShowSignin() {
     viewModel.onShowSignin();
 }
 
 // additional functions
 
+function onShowPasswordTapped(args) {
+    var view = args.object;
+    var viewModel = view.page.bindingContext;
+    viewModel.showPassword = !viewModel.showPassword;
+}
+exports.onShowPasswordTapped = onShowPasswordTapped;
+
 function pageLoaded(args) {
+    var frameModule = require("ui/frame");
+    // Hide the iOS UINavigationBar so it doesn't get in the way of the animation
+    if (frameModule.topmost().ios) {
+        frameModule.topmost().ios.navBarVisibility = "never";
+    } else {
+        frameModule.topmost().android.navBarVisibility = "never";
+    }
+
     var page = args.object;
 
     helpers.platformInit(page);
@@ -86,6 +118,12 @@ function pageLoaded(args) {
     }
     // additional pageLoaded
 
+    // Create the parallax background effect by scaling the background image
+    page.getViewById("backgroundParallax").animate({
+        scale: { x: 1, y: 1 },
+        duration: 8000
+    });
+
     if (isInit) {
         isInit = false;
 
@@ -93,10 +131,10 @@ function pageLoaded(args) {
 
         viewModel.on(viewModel.events.register, onRegister);
         viewModel.on(viewModel.events.showRegister, onShowRegister);
+        viewModel.on(viewModel.events.password, onPassword);
+        viewModel.on(viewModel.events.showPassword, onShowPassword);
         viewModel.on(viewModel.events.showSignin, onShowSignin);
-
         // additional pageInit
-
     }
 }
 

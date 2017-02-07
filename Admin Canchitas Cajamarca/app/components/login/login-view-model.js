@@ -9,14 +9,19 @@ ViewModel = new Observable({
 
     signinVisibility: 'visible',
     registerVisibility: 'collapsed',
+    passwordVisibility: 'collapsed',
+
     displayName: '',
     email: '',
     password: '',
     rememberme: '',
+    showPassword: false,
 
     events: {
         register: 'register',
         showRegister: 'showRegister',
+        password: 'password',
+        showPassword: 'showPassword',
         showSignin: 'showSignin',
         signin: 'signin'
     },
@@ -27,11 +32,11 @@ ViewModel = new Observable({
             email: this.get('email'),
             password: this.get('password'),
             rememberme: this.get('rememberme')
-
         });
     },
 
     onShowRegister: function() {
+        this.set('passwordVisibility', 'collapsed');
         this.set('signinVisibility', 'collapsed');
         this.set('registerVisibility', 'visible');
     },
@@ -45,9 +50,23 @@ ViewModel = new Observable({
         });
     },
 
+    onShowPassword: function() {
+        this.set('passwordVisibility', 'visible');
+        this.set('signinVisibility', 'collapsed');
+        this.set('registerVisibility', 'collapsed');
+    },
+
+    onPassword: function() {
+        this.notify({
+            eventName: this.events.password,
+            email: this.get('email')
+        });
+    },
+
     onShowSignin: function() {
         this.set('signinVisibility', 'visible');
         this.set('registerVisibility', 'collapsed');
+        this.set('passwordVisibility', 'collapsed');
     },
     // additional properties
 
