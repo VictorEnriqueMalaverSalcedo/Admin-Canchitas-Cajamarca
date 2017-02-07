@@ -1,0 +1,133 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true" loaded="pageLoaded" id="horariosModelAddScreen" cssClass="screen">
+    <GridLayout rows="auto, *">
+        <GridLayout rows="auto, *" cssClass="page-header">
+            <GridLayout cssClass="action-bar" columns="auto, *, auto">
+                <Button text="Cancel" onTap="onCancelTap" />
+                <Label col="1" text="Crear" cssClass="action-bar-title" />
+                <Button col="2" text="Save" onTap="onSaveTap" />
+            </GridLayout>
+            <!-- Workaround for one sided border -->
+            <StackLayout row="1" cssClass="action-bar-border" height="1"></StackLayout>
+        </GridLayout>
+
+        <StackLayout row="1">
+            <ScrollView>
+
+                <StackLayout row="1">
+
+
+                    <GridLayout columns="*" rows="auto, auto" cssClass="form-item field field--text" id="canchaField">
+
+
+                        <Label text="Cancha" cssClass="label" col="1" row="0" />
+
+
+                        <TextField col="1" row="1" text="{{ cancha }}" />
+
+                        <!-- cancha content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="lunesField">
+
+
+                        <Label text="Lunes" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ lunes }}" />
+                        <!-- lunes content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="martesField">
+
+
+                        <Label text="Martes" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ martes }}" />
+                        <!-- martes content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="miercolesField">
+
+
+                        <Label text="Miercoles" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ miercoles }}" />
+                        <!-- miercoles content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="juevesField">
+
+
+                        <Label text="Jueves" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ jueves }}" />
+                        <!-- jueves content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="viernesField">
+
+
+                        <Label text="Viernes" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ viernes }}" />
+                        <!-- viernes content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="sabadoField">
+
+
+                        <Label text="Sabado" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ sabado }}" />
+                        <!-- sabado content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="domingoField">
+
+
+                        <Label text="Domingo" cssClass="label" col="0" row="1" />
+
+                        <Switch col="1" row="1" checked="{{ domingo }}" />
+                        <!-- domingo content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+                    <!-- editableListForm26 additional fields -->
+
+
+                </StackLayout>
+                <!-- additional view content -->
+
+            </ScrollView>
+        </StackLayout>
+    </GridLayout>
+
+</Page>

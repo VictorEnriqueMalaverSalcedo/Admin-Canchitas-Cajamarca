@@ -1,0 +1,44 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" navigatedTo="navigatedTo" id="canchasModelDetailsScreen" cssClass="screen">
+    <Page.actionBar>
+        <widgets:action-bar />
+    </Page.actionBar>
+
+    <ScrollView>
+        <StackLayout>
+
+            <GridLayout rows="auto, *">
+                <GridLayout rows="auto" columns="*, *">
+
+                    <widgets:button text="Edit" tap="onEditItemTap" />
+
+
+                </GridLayout>
+                <StackLayout row="1">
+
+
+                    <Label text="{{ contacto }}" />
+
+
+                    <TextView text="{{ direccion }}" />
+
+
+                    <GridLayout columns="*" rows="auto, auto" cssClass="form-item field field--image" id="fotoField">
+
+
+                        <Label text="Foto" cssClass="label" col="1" row="0" />
+
+                        <Image src="{{ foto }}" row="1" col="0" stretch="aspectFit" cssClass="image-field alignment-center" />
+
+                        <!-- foto content -->
+
+                    </GridLayout>
+
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+                    <!-- additional view content -->
+
+                </StackLayout>
+            </GridLayout>
+
+        </StackLayout>
+    </ScrollView>
+</Page>

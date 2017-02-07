@@ -3,14 +3,415 @@
   "views": [
     {
       "type": "NativeScript:view",
-      "name": "homeView",
-      "components": [],
-      "title": "Home View",
+      "name": "canchas",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombre",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "contacto",
+                  "title": "Contacto",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "contacto"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "direccion",
+                  "title": "Dirección",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "direccion"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "ruc",
+                  "title": "RUC",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "ruc"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celular",
+                  "title": "Celular",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "celular"
+                }
+              ],
+              "name": "editableListForm5",
+              "formType": "edit"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "foto",
+                  "title": "Foto",
+                  "inputType": "image",
+                  "titlePosition": "top",
+                  "alignment": "center",
+                  "dataBindingImage": "foto"
+                }
+              ],
+              "name": "editableListForm22",
+              "formType": "detail"
+            }
+          ],
+          "name": "canchasModel",
+          "dataProvider": "backendServices",
+          "collection": "canchas",
+          "headerField": "nombre",
+          "subHeaderField": "contacto",
+          "isMapView": false,
+          "addItemForm": false,
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "nombre",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "nombre",
+          "detailSubHeaderField": "contacto",
+          "detailDescriptionField": "direccion"
+        }
+      ],
+      "title": "Mis datos",
       "addToNavigation": true,
-      "icon": "home"
+      "icon": "contacts"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "login",
+      "components": [
+        {
+          "type": "NativeScript:authentication",
+          "name": "loginModel",
+          "dataProvider": "backendServices",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Registrarme",
+          "registerEmailLabel": "Correo",
+          "registerPasswordLabel": "Contraseña",
+          "registerNameLabel": "Nombre",
+          "registerLabel": "Registrarse",
+          "registerRedirect": "canchas",
+          "gotoSigninLabel": "Regresar",
+          "enableLogout": true,
+          "logoutLabel": "Salir",
+          "enableRememberme": true,
+          "remembermeLabel": "Recordar",
+          "emailLabel": "Correo",
+          "passwordLabel": "Contraseña",
+          "signinLabel": "Ingresar",
+          "signinRedirect": "canchas"
+        }
+      ],
+      "title": "Login",
+      "addToNavigation": false
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "grasses",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "dimensiones",
+                  "title": "Dimensiones",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "dimensiones"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "descripcion",
+                  "title": "Descripcion",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "descripcion"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "costoDia",
+                  "title": "Costo día",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "costodia"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "costonoche",
+                  "title": "Costo noche",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "costonoche"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "horainicio",
+                  "title": "Hora inicio",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "horainicio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "horafin",
+                  "title": "Hora fin",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "horafin"
+                }
+              ],
+              "name": "editableListForm14",
+              "formType": "edit"
+            }
+          ],
+          "name": "grassesModel",
+          "dataProvider": "backendServices",
+          "collection": "grasses",
+          "headerField": "dimensiones",
+          "subHeaderField": "descripcion",
+          "isMapView": false,
+          "addItemForm": false,
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "dimensiones",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "dimensiones",
+          "detailSubHeaderField": "estado",
+          "detailDescriptionField": "descripcion"
+        }
+      ],
+      "title": "Grasses",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "horarios",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "cancha",
+                  "title": "Cancha",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "cancha"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "lunes",
+                  "title": "Lunes",
+                  "inputType": "switch",
+                  "dataBinding": "Lunes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "martes",
+                  "title": "Martes",
+                  "inputType": "switch",
+                  "dataBinding": "Martes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "miercoles",
+                  "title": "Miercoles",
+                  "inputType": "switch",
+                  "dataBinding": "Miercoles"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "jueves",
+                  "title": "Jueves",
+                  "inputType": "switch",
+                  "dataBinding": "Jueves"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "viernes",
+                  "title": "Viernes",
+                  "inputType": "switch",
+                  "dataBinding": "Viernes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "sabado",
+                  "title": "Sabado",
+                  "inputType": "switch",
+                  "dataBinding": "Sabado"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "domingo",
+                  "title": "Domingo",
+                  "inputType": "switch",
+                  "dataBinding": "Domingo"
+                }
+              ],
+              "name": "editableListForm26",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "cancha",
+                  "title": "Cancha",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "dataBinding": "cancha"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "lunes",
+                  "title": "Lunes",
+                  "inputType": "switch",
+                  "dataBinding": "Lunes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "martes",
+                  "title": "Martes",
+                  "inputType": "switch",
+                  "dataBinding": "Martes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "miercoles",
+                  "title": "Miercoles",
+                  "inputType": "switch",
+                  "dataBinding": "Miercoles"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "jueves",
+                  "title": "Jueves",
+                  "inputType": "switch",
+                  "dataBinding": "Jueves"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "viernes",
+                  "title": "Viernes",
+                  "inputType": "switch",
+                  "dataBinding": "Viernes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "sabado",
+                  "title": "Sabado",
+                  "inputType": "switch",
+                  "dataBinding": "Sabado"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "domingo",
+                  "title": "Domingo",
+                  "inputType": "switch",
+                  "dataBinding": "Domingo"
+                }
+              ],
+              "name": "editableListForm27",
+              "formType": "edit"
+            }
+          ],
+          "name": "horariosModel",
+          "dataProvider": "backendServices",
+          "collection": "horarios",
+          "headerField": "cancha",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "cancha",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "cancha",
+          "detailSubHeaderField": "cancha"
+        }
+      ],
+      "title": "Horarios",
+      "addToNavigation": true,
+      "icon": "recents"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "NativeScript:dataProvider",
+      "name": "backendServices",
+      "source": "everlive",
+      "everliveKey": "iiva27tpwgbkw6zs",
+      "offlineStorage": true,
+      "title": "Backend Services"
+    }
+  ],
   "name": "nativeScriptApp",
   "navigation": "listmenu",
   "transition": "none",
