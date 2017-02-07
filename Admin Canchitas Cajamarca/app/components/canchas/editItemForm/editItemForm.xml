@@ -1,10 +1,23 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true" navigatedTo="onNavigatedTo" loaded="pageLoaded" id="canchasModelEditScreen" cssClass="screen">
+    <Page.actionBar>
+        <ActionBar title="Editar">
+            <NavigationButton text="Back" android.systemIcon="ic_menu_back"
+                tap="onBack">
+            </NavigationButton>
+            <ActionBar.titleView>
+                <GridLayout columns="auto, 5, *">
+                <Image src="~/images/nativescript_logo.png" width="36" height="36" />
+                <Label col="2" text="Editar" minWidth="100" />
+                </GridLayout>
+            </ActionBar.titleView>
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout rows="auto, *">
         <GridLayout rows="auto, *" cssClass="page-header">
             <GridLayout cssClass="action-bar" columns="auto, *, auto">
-                <Button text="Cancel" onTap="onCancelTap" />
+                <Button text="Cancelar" onTap="onCancelTap" />
                 <Label col="1" text="{{ nombre }}" cssClass="action-bar-title" />
-                <Button col="2" text="Save" onTap="onSaveTap" />
+                <Button col="2" text="Guardar" onTap="onSaveTap" />
             </GridLayout>
             <!-- Workaround for one sided border -->
             <StackLayout row="1" cssClass="action-bar-border" height="1"></StackLayout>

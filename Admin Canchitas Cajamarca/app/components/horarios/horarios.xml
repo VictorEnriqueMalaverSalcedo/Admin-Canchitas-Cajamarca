@@ -5,9 +5,13 @@
 
     <StackLayout>
 
+        <TextView text="Sólo podrá agregar un solo horario." />
+
+        <TextView text="Si ya lo creó edite cada día de la semana." />
+
         <GridLayout rows="auto, *">
 
-            <widgets:button text="Add" tap="onAddItemTap" />
+            <widgets:button text="Add" tap="onAddItemTap" visibility="{{ btnAddHorario ? 'collapsed' : 'visible' }}"/>
 
             <ListView row="1" items="{{ listItems }}" itemTap="onListViewItemTap">
                 <ListView.itemTemplate>

@@ -20,7 +20,7 @@ exports.onListViewItemTap = onListViewItemTap;
 
 function flattenLocationProperties(dataItem) {
     var propName, propValue,
-        isLocation = function(value) {
+        isLocation = function (value) {
             return propValue && typeof propValue === 'object' &&
                 propValue.longitude && propValue.latitude;
         };
@@ -58,10 +58,10 @@ function pageLoaded(args) {
     };
 
     _fetchData()
-        .then(function(result) {
+        .then(function (result) {
             var itemsList = [];
 
-            result.forEach(function(item) {
+            result.forEach(function (item) {
 
                 flattenLocationProperties(item);
 
@@ -72,11 +72,10 @@ function pageLoaded(args) {
                     description: item.contacto,
 
                     // singleItem properties
+
                     details: item
                 });
 
-                console.log(item);
-                
             });
 
             viewModel.set('listItems', itemsList);

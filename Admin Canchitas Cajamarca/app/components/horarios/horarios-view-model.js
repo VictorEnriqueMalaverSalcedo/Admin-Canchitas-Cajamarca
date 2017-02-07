@@ -10,7 +10,7 @@ ViewModel = new Observable({
     isLoading: false,
     listItems: [],
     // additional properties
-
+    btnAddHorario: false,
 });
 
 // START_CUSTOM_CODE_horarios

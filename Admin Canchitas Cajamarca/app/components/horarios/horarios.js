@@ -1,4 +1,6 @@
 'use strict';
+var dialogs = require("ui/dialogs");
+
 var isInit = true,
     helpers = require('../../utils/widgets/helper'),
     navigationProperty = require('../../utils/widgets/navigation-property'),
@@ -19,15 +21,27 @@ function onListViewItemTap(args) {
 exports.onListViewItemTap = onListViewItemTap;
 
 function onAddItemTap(args) {
-    helpers.navigate({
-        moduleName: 'components/horarios/addItemForm/addItemForm'
-    });
+    var itemData = viewModel.get('listItems');
+
+    if (itemData.length > 0) {
+        dialogs.alert({
+            title: "Ya existe un horario",
+            message: "Si desea modificar el horario, seleccione el día que desea modificar.",
+            okButtonText: "OK"
+        }).then(function () {
+            console.log("Dialog closed!");
+        });
+    } else {
+        helpers.navigate({
+            moduleName: 'components/horarios/addItemForm/addItemForm'
+        });
+    }
 }
 exports.onAddItemTap = onAddItemTap;
 
 function flattenLocationProperties(dataItem) {
     var propName, propValue,
-        isLocation = function(value) {
+        isLocation = function (value) {
             return propValue && typeof propValue === 'object' &&
                 propValue.longitude && propValue.latitude;
         };
@@ -65,11 +79,11 @@ function pageLoaded(args) {
     };
 
     _fetchData()
-        .then(function(result) {
+        .then(function (result) {
             var itemsList = [];
 
-            result.forEach(function(item) {
-
+            result.forEach(function (item) {
+                viewModel.set('btnAddHorario', true);
                 flattenLocationProperties(item);
 
                 itemsList.push({
@@ -79,6 +93,7 @@ function pageLoaded(args) {
                     // singleItem properties
                     details: item
                 });
+
             });
 
             viewModel.set('listItems', itemsList);

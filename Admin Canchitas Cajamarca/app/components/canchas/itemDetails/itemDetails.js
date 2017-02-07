@@ -14,6 +14,14 @@ function navigatedTo(args) {
     // context changes
 
     page.bindingContext = page.navigationContext;
+
+    // iterate grasses
+    var grasses = "";
+    for (var i = 0; i < page.bindingContext.grassExpand.length; i++) {
+        grasses += page.bindingContext.grassExpand[i].descripcion + " ";
+    }
+    page.getViewById("grasses").text = grasses;
+    // 
 }
 
 exports.navigatedTo = navigatedTo;
@@ -27,3 +35,20 @@ function onEditItemTap(args) {
     });
 }
 exports.onEditItemTap = onEditItemTap;
+
+
+function onGoToHorarioItemTap(args) {
+    var source = args.view || args.object;
+
+    helpers.navigate({
+        moduleName: 'components/horarios/horarios',
+        context: source.bindingContext,
+        filter: encodeURIComponent(JSON.stringify({
+            field: 'cancha',
+            value: '11db0e90-ecea-11e6-876c-955c6aa0be14',
+            operator: 'eq'
+        })),
+
+    });
+}
+exports.onGoToHorarioItemTap = onGoToHorarioItemTap;
