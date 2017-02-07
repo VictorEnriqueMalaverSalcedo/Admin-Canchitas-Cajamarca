@@ -16,6 +16,8 @@
                 <StackLayout row="1">
 
 
+                    <Label text="{{ grassExpand }}" />
+
                     <Label text="{{ contacto }}" />
 
 

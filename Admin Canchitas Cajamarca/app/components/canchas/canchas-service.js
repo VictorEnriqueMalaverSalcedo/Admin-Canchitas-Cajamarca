@@ -7,7 +7,7 @@ var _,
 
     consts;
 
-function Service() {}
+function Service() { }
 
 function onRequestSuccess(data) {
     return data.result;
@@ -18,11 +18,16 @@ function onRequestFail(err) {
     return err;
 }
 
-Service.prototype.getAllRecords = function(filter) {
+Service.prototype.getAllRecords = function (filter) {
     var expandExp,
         data = dataService.data('canchas');
 
     expandExp = {
+
+        grass: {
+            "TargetTypeName": "grasses",
+            "ReturnAs":"grassExpand",
+        },
 
     };
 

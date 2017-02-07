@@ -30,95 +30,125 @@
 
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
 
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="lunesField">
-
-
-                        <Label text="Lunes" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ lunes }}" />
-                        <!-- lunes content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora0">
+                        <Label text="0" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora0 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="martesField">
-
-
-                        <Label text="Martes" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ martes }}" />
-                        <!-- martes content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora1">
+                        <Label text="1" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora1 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="miercolesField">
-
-
-                        <Label text="Miercoles" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ miercoles }}" />
-                        <!-- miercoles content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora2">
+                        <Label text="2" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora2 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="juevesField">
-
-
-                        <Label text="Jueves" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ jueves }}" />
-                        <!-- jueves content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora3">
+                        <Label text="3" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora3 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="viernesField">
-
-
-                        <Label text="Viernes" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ viernes }}" />
-                        <!-- viernes content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora4">
+                        <Label text="4" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora4 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="sabadoField">
-
-
-                        <Label text="Sabado" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ sabado }}" />
-                        <!-- sabado content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora5">
+                        <Label text="5" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora5 }}" />
                     </GridLayout>
-
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
-
-
-                    <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="domingoField">
-
-
-                        <Label text="Domingo" cssClass="label" col="0" row="1" />
-
-                        <Switch col="1" row="1" checked="{{ domingo }}" />
-                        <!-- domingo content -->
-
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora6">
+                        <Label text="6" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora6 }}" />
                     </GridLayout>
-
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora7">
+                        <Label text="7" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora7 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora8">
+                        <Label text="8" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora8 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora9">
+                        <Label text="9" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora9 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora10">
+                        <Label text="10" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora10 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora11">
+                        <Label text="11" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora11 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora12">
+                        <Label text="12" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora12 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora13">
+                        <Label text="13" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora13 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora14">
+                        <Label text="14" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora14 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora15">
+                        <Label text="15" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora15 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora16">
+                        <Label text="16" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora16 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora17">
+                        <Label text="17" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora17 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora18">
+                        <Label text="18" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora18 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora19">
+                        <Label text="19" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora19 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora20">
+                        <Label text="20" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora20 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora21">
+                        <Label text="21" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora21 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora22">
+                        <Label text="22" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora22 }}" />
+                    </GridLayout>
+                    <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+<GridLayout columns="*, *" rows="auto, auto" cssClass="form-item field field--switch" id="Hora23">
+                        <Label text="23" cssClass="label" col="0" row="1" />
+                        <Switch col="1" row="1" checked="{{ Hora23 }}" />
+                    </GridLayout>
                     <StackLayout cssClass="form-item-border" height="1"></StackLayout>
                     <!-- editableListForm26 additional fields -->
 

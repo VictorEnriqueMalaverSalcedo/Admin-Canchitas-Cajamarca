@@ -7,19 +7,30 @@ ViewModel = new Observable({
 
     cancha: '',
 
-    lunes: '',
-
-    martes: '',
-
-    miercoles: '',
-
-    jueves: '',
-
-    viernes: '',
-
-    sabado: '',
-
-    domingo: '',
+    Hora0: '',
+    Hora1: '',
+    Hora2: '',
+    Hora3: '',
+    Hora4: '',
+    Hora5: '',
+    Hora6: '',
+    Hora7: '',
+    Hora8: '',
+    Hora9: '',
+    Hora10: '',
+    Hora11: '',
+    Hora12: '',
+    Hora13: '',
+    Hora14: '',
+    Hora15: '',
+    Hora16: '',
+    Hora17: '',
+    Hora18: '',
+    Hora19: '',
+    Hora20: '',
+    Hora21: '',
+    Hora22: '',
+    Hora23: '',
 
     // additional properties
 

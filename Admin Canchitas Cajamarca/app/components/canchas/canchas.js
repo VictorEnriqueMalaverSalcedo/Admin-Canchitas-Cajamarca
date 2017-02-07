@@ -74,6 +74,9 @@ function pageLoaded(args) {
                     // singleItem properties
                     details: item
                 });
+
+                console.log(item);
+                
             });
 
             viewModel.set('listItems', itemsList);
